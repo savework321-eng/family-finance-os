@@ -1,108 +1,51 @@
 # Family Finance OS (PFOS)
 
-> Enterprise Family Financial Management System powered by Google Apps Script.
+Enterprise-grade family financial management system built using Google Apps Script and Google Spreadsheet.
 
 ---
 
-## Overview
-
-Family Finance OS (PFOS) adalah sistem manajemen keuangan keluarga yang dirancang untuk membantu seluruh anggota keluarga mengelola keuangan secara terintegrasi.
-
-PFOS dibangun dengan konsep:
-
-- Multi User
-- Multi Profile
-- Multi Device
-- Responsive Web App
-- Google Account Authentication
-- Google Spreadsheet Database
-- Google Apps Script Backend
-- Bootstrap 5 Frontend
-- Chart.js Visualization
-
-Project ini dikembangkan menggunakan pendekatan Clean Architecture sehingga mudah dikembangkan dan dipelihara dalam jangka panjang.
-
----
-
-## Current Status
-
-Version
-
-0.1.0-alpha
-
-Current Sprint
-
-SPR-0002
-
-Status
-
-🟢 Active Development
-
----
-
-## Technology Stack
-
-Frontend
-
-- HTML
-- CSS
-- Bootstrap 5
-- JavaScript
-
-Backend
+## Technology
 
 - Google Apps Script
-
-Database
-
 - Google Spreadsheet
-
-Visualization
-
+- Bootstrap 5
+- HTML5
+- CSS3
+- JavaScript ES2022
 - Chart.js
 
-Version Control
+---
 
-- Git
-- GitHub
+## Architecture
+
+Clean Architecture
+
+Presentation
+
+↓
+
+Controller
+
+↓
+
+Service
+
+↓
+
+Repository
+
+↓
+
+Spreadsheet
 
 ---
 
-## Development Principles
+## Development
 
-- Clean Architecture
-- SOLID Principles
-- DRY
-- Modular Design
-- Enterprise Standard
-- Documentation First
+Sprint Based Development
 
 ---
 
-## Repository Structure
+## Current Version
 
-Repository akan berkembang mengikuti roadmap project.
-
-Seluruh dokumentasi berada pada folder:
-
-```
-
-/docs
-
-```
-
-Seluruh source code berada pada folder:
-
-```
-
-/src
-
-```
-
----
-
-## License
-
-This project is currently under development.
-
-Copyright © 2026
+Sprint 5
