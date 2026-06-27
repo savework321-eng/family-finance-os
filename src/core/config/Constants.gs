@@ -1,106 +1,47 @@
 /**
- * @file Defines immutable business and framework constants.
+ * Application Constants
  */
 
-var PFOS = globalThis.PFOS || {};
-PFOS.Core = PFOS.Core || {};
-PFOS.Core.Config = PFOS.Core.Config || {};
-globalThis.PFOS = PFOS;
+PFOS.Config = Object.freeze({};
 
-(function configureConstants(root) {
-    /**
-     * Application constants shared across PFOS layers.
-     *
-     * @namespace PFOS.Core.Config.Constants
-     */
-    root.PFOS.Core.Config.Constants = Object.freeze({
-        /**
-         * Record lifecycle statuses from the data dictionary.
-         *
-         * @public
-         * @type {Readonly<Object>}
-         */
-        STATUS: Object.freeze({
-            ACTIVE: 'Active',
-            INACTIVE: 'Inactive',
-            ARCHIVED: 'Archived'
-        }),
+PFOS.Constants = Object.freeze({
 
-        /**
-         * Family authorization roles from the security rules.
-         *
-         * @public
-         * @type {Readonly<Object>}
-         */
-        ROLE: Object.freeze({
-            OWNER: 'Owner',
-            PARTNER: 'Partner',
-            FUTURE_FAMILY_MEMBER: 'Future Family Member'
-        }),
+    STATUS: Object.freeze({
 
-        /**
-         * Financial profile names from the business rules.
-         *
-         * @public
-         * @type {Readonly<Object>}
-         */
-        PROFILE: Object.freeze({
-            PERSONAL: 'Personal',
-            FAMILY: 'Family'
-        }),
+        ACTIVE: 'ACTIVE',
 
-        /**
-         * Supported transaction types from the business rules.
-         *
-         * @public
-         * @type {Readonly<Object>}
-         */
-        TRANSACTION_TYPE: Object.freeze({
-            INCOME: 'Income',
-            EXPENSE: 'Expense'
-        }),
+        INACTIVE: 'INACTIVE'
 
-        /**
-         * Audited data modification actions from the audit rules.
-         *
-         * @public
-         * @type {Readonly<Object>}
-         */
-        AUDIT_ACTION: Object.freeze({
-            CREATE: 'Create',
-            UPDATE: 'Update',
-            DELETE: 'Delete'
-        }),
+    }),
 
-        /**
-         * Standard API response states from the API design.
-         *
-         * @public
-         * @type {Readonly<Object>}
-         */
-        RESPONSE_STATUS: Object.freeze({
-            SUCCESS: true,
-            ERROR: false
-        }),
+    ROLE: Object.freeze({
 
-        /**
-         * Log levels used by backend logging.
-         *
-         * @public
-         * @type {Readonly<Object>}
-         */
-        LOG_LEVEL: Object.freeze({
-            INFO: 'Info',
-            WARNING: 'Warning',
-            ERROR: 'Error'
-        })
-    });
+        OWNER: 'OWNER',
 
-    /**
-     * Backward-compatible alias for application constants.
-     *
-     * @public
-     * @type {Readonly<Object>}
-     */
-    root.PFOS.Constants = root.PFOS.Core.Config.Constants;
-})(globalThis);
+        PARTNER: 'PARTNER',
+
+        CHILD: 'CHILD'
+
+    }),
+
+    TRANSACTION: Object.freeze({
+
+        INCOME: 'INCOME',
+
+        EXPENSE: 'EXPENSE',
+
+        TRANSFER: 'TRANSFER'
+
+    }),
+
+    LOG_LEVEL: Object.freeze({
+
+        INFO: 'INFO',
+
+        WARNING: 'WARNING',
+
+        ERROR: 'ERROR'
+
+    })
+
+});
