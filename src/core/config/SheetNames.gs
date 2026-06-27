@@ -1,51 +1,70 @@
 /**
- * Spreadsheet Sheet Names
+ * @file Defines official spreadsheet worksheet names.
  */
 
-const PFOS = PFOS || {};
+var PFOS = globalThis.PFOS || {};
+PFOS.Core = PFOS.Core || {};
+PFOS.Core.Config = PFOS.Core.Config || {};
+globalThis.PFOS = PFOS;
 
-PFOS.Sheets = Object.freeze({
+(function configureSheetNames(root) {
+    /**
+     * Official worksheet names from the spreadsheet schema.
+     *
+     * @namespace PFOS.Core.Config.SheetNames
+     */
+    root.PFOS.Core.Config.SheetNames = Object.freeze({
+        /** @public {string} Members worksheet. */
+        MEMBERS: 'Members',
 
-    CORE_CONFIG: 'Core_Config',
+        /** @public {string} Profiles worksheet. */
+        PROFILES: 'Profiles',
 
-    USERS: 'Users',
+        /** @public {string} Accounts worksheet. */
+        ACCOUNTS: 'Accounts',
 
-    PROFILES: 'Profiles',
+        /** @public {string} Categories worksheet. */
+        CATEGORIES: 'Categories',
 
-    ACCOUNTS: 'Accounts',
+        /** @public {string} Transactions worksheet. */
+        TRANSACTIONS: 'Transactions',
 
-    CATEGORIES: 'Categories',
+        /** @public {string} Budgets worksheet. */
+        BUDGETS: 'Budgets',
 
-    TRANSACTIONS: 'Transactions',
+        /** @public {string} Goals worksheet. */
+        GOALS: 'Goals',
 
-    BUDGETS: 'Budgets',
+        /** @public {string} Assets worksheet. */
+        ASSETS: 'Assets',
 
-    GOALS: 'Goals',
+        /** @public {string} Liabilities worksheet. */
+        LIABILITIES: 'Liabilities',
 
-    ASSETS: 'Assets',
+        /** @public {string} Subscriptions worksheet. */
+        SUBSCRIPTIONS: 'Subscriptions',
 
-    LIABILITIES: 'Liabilities',
+        /** @public {string} Recurring bills worksheet. */
+        RECURRING_BILLS: 'RecurringBills',
 
-    SUBSCRIPTIONS: 'Subscriptions',
+        /** @public {string} Notifications worksheet. */
+        NOTIFICATIONS: 'Notifications',
 
-    RECURRING_BILLS: 'RecurringBills',
+        /** @public {string} Settings worksheet. */
+        SETTINGS: 'Settings',
 
-    NOTIFICATIONS: 'Notifications',
+        /** @public {string} Activity logs worksheet. */
+        ACTIVITY_LOGS: 'ActivityLogs',
 
-    ACTIVITY_LOGS: 'ActivityLogs',
+        /** @public {string} Audit logs worksheet. */
+        AUDIT_LOGS: 'AuditLogs'
+    });
 
-    AUDIT_LOGS: 'AuditLogs',
-
-    FAMILY_TIMELINE: 'FamilyTimeline',
-
-    FINANCIAL_HEALTH: 'FinancialHealth',
-
-    SETTINGS: 'Settings',
-
-    DASHBOARD_CACHE: 'DashboardCache',
-
-    BACKUP_HISTORY: 'BackupHistory',
-
-    VERSION: 'Version'
-
-});
+    /**
+     * Backward-compatible alias for official worksheet names.
+     *
+     * @public
+     * @type {Readonly<Object>}
+     */
+    root.PFOS.Sheets = root.PFOS.Core.Config.SheetNames;
+})(globalThis);
