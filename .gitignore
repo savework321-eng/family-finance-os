@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Visual Studio Code
+.vscode/
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
+
+# Backup
+*.bak
+
+# Node
+node_modules/
+
+# Google Apps Script
+.clasp.json
+
+# Environment
+.env
+.env.local
